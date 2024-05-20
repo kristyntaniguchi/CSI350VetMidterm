@@ -8,27 +8,64 @@
 }
 
 @*Header*@
-<h2>Patients</h2>
+<div class="container mb-5">
+    <div class="row justify-content-between vet-details-header">
+        <div class="col">
+            <h1 class="text-color-blue mb-4 ">Patients</h1>
 
-@*Cards for vet info.  Loop for each one*@
-<div class="container mt-5">
-    <div class="row row-cols-4 g-5 h-100 card-group ">
-        @foreach (Patient p in Model)
+        </div>
+        @if (User.IsInRole("Admin"))
         {
-            <div class="col ">
-                <div class="card flex-column h-100 border-0 h-100">
-                    <div class="d-flex h-100 justify-content-center align-content-center align-items-center product-display-image-container">
-                        @*Add asp-route-species="@p.Species" to the url helpers so we can use it for URL routing*@
-                        <a class="text-decoration-none text-info  h-100 " asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id" asp-route-species="@p.Species"><img src="@p.ImgURL" class="product-display-image" style="max-width: 100%; height: auto" /></a>
-                    </div>
-
-                    <div class="card-body ">
-                        <h6 class="card-title small text-trucate"><a class="text-decoration-none text-info overflow-hidden text-dark" asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id" asp-route-species="@p.Species">@p.Name</a></h6>
-                        <div class="card-text small text-truncate block"></div>
-                    </div>
-
+            <div class="col-auto">
+                <div class="row align-items-center me-3">
+                    <a class="btn button-color-seafoam  " asp-controller="Patient" asp-action="Create">New Pet Form</a>
                 </div>
             </div>
+
         }
     </div>
+
+
+    @*Cards for vet info.  Loop for each one*@
+
+        <div class="row row-cols-1">
+            @foreach (Patient p in Model)
+            {
+                <div class="col">
+                    <div class="border patient-index-card-size ">
+                        <div class="row g-0">
+                            <div class="col">
+                                <a asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id">
+                                    <img src="@p.ImgURL" class="img-fluid  patient-index-image circle-image m-1" alt="patient image ">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-decoration-none overflow-hidden text-color-blue" asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id">@p.Name</a></h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <div class="card-title"><a class="text-decoration-none overflow-hidden text-color-blue" asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id">@p.Species</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <div class="card-title"><a class="text-decoration-none overflow-hidden text-color-blue" asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id">@p.Breed</a></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <div class="card-title"><a class="text-decoration-none overflow-hidden text-color-blue" asp-controller="Patient" asp-action="Details" asp-route-id="@p.Id">@p.Age year(s)-old</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+  
 </div>
+
+

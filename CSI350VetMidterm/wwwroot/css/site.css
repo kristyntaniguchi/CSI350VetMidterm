@@ -1,3 +1,31 @@
+* {
+
+
+}
+
+.navbar-background-color {
+    background-color: #2b6e6e;
+}
+
+/*Target the body of the app*/
+body {
+    background-color: #edf8f8;
+
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-border {
+    border-top: 3px solid #00B7BD;
+    height: 4vh;
+}
+
+.vet-dropdown-menu {
+    background-color: #dbf0ec;
+}
+
 html {
   font-size: 14px;
 }
@@ -6,6 +34,10 @@ html {
   html {
     font-size: 16px;
   }
+}
+
+.contact-info {
+    line-height: 2em;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -17,12 +49,239 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
 
-.square-image{
-    width: 100%;
+/*Images and cards*/
+
+.details-image{
+    width: 300px;
     height: 300px;
     object-fit: cover;
+}
+
+.card-size{
+    width: 70vw;
+    height: 50vh;
+}
+
+.patient-index-header {
+    margin-top: 8vh;
+
+    /*border-bottom: 3px solid #00B7BD;*/
+    /* Double shadow effect */
+    /*box-shadow: 0px 4px 0px 0px #B7DD79, 0px 8px 0px 0px #F68D2E;*/
+}
+
+.patient-index-card-size{
+    height: 9vh;
+}
+
+.patient-index-image {
+    width: 8vh;
+    height: calc(8vh - 1px);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*.veterinarian-index-card-size {
+    width: 20vw;
+    height: 30vh;
+}
+*/
+.veterinarian-index-image {
+    width: 20vh;
+    height: calc(20vh - 1px);
+    object-fit: cover;
+
+}
+
+/*Vet Details Page*/
+.vet-details-header {
+    margin-top: 8vh;
+    /*border-bottom: 3px solid #00B7BD;*/
+    /* Double shadow effect */
+    /*box-shadow: 0px 4px 0px 0px #B7DD79, 0px 8px 0px 0px #F68D2E;*/
+
+}
+
+.vet-details-card-body {
+    background-color: #edf8f8;
+}
+
+/*Patient Details Page*/
+.patient-details-card-body {
+    background-color: #edf8f8;
+}
+
+
+
+/*Text Colors=======================*/
+/*
+    Palettes:
+    Retro Summer: https://colorpalettes.io/retro-summer-sunset-color-palette/?swpmtx=3f124dacbc832a7ff5361607fa40c27b&swpmtxnonce=3f3353e59e
+    Tropical Summer: https://colorpalettes.io/tropical-summer-color-palette/?swpmtx=3f124dacbc832a7ff5361607fa40c27b&swpmtxnonce=3f3353e59e
+    Tropical Hawaiian: https://colorpalettes.io/tropical-hawaiian-color-palette/?swpmtx=c539f17ac827d1ad21ee664e421d88a0&swpmtxnonce=47dfc50011
+    Peppy Puppy Dogs: https://www.color-hex.com/color-palette/1046158
+    Summer in Hawaii: https://www.color-hex.com/color-palette/98085
+    Retro Beach Waves: https://www.color-hex.com/color-palette/99657
+    Beach Episode: https://www.color-hex.com/color-palette/1046125
+*/
+
+/*Blues*/
+.text-color-cyan-sky {
+    color: #00B7BD;
+}
+
+.text-color-lake {
+    color: #9CDBD9;
+}
+
+.text-color-teal {
+    color: #13d1aa;
+}
+
+.text-color-blue {
+    color: #0f61b3;
+}
+
+.text-color-blue-bird {
+    color: #0099B2;
+}
+
+.text-color-summer-air {
+    color: #3EB1C8;
+}
+
+.text-color-apple-blue {
+    color: #8FD6BD;
+}
+
+/*Greens*/
+.text-color-seafoam {
+    color: #85cec1;
+}
+
+.text-color-eucalyptus-green {
+    color: #1D6960;
+}
+
+.text-color-wasabi-green {
+    color: #B7DD79;
+}
+
+.text-color-sour-apple {
+    color: #67B346;
+}
+
+.text-color-sprout {
+    color: #E9E186;
+}
+
+.text-color-muted-green-greige {
+    color: #d3e3c5;
+}
+
+
+/*Yellows and beiges*/
+.text-color-goldren-key {
+    color: #FFCC52;
+}
+
+
+.text-color-golden-light {
+    color: #dabc5b;
+}
+
+.text-color-peach {
+    color: #e1bb8d;
+}
+
+.text-color-mango-loco {
+    /*retro*/
+    color: #FFB81C;
+}
+
+/*Oranges*/
+.text-color-quince-jelly {
+    color: #F68D2E;
+}
+
+.text-color-orange-bronze {
+    color: #FF7F32;
+}
+
+/*Reds*/
+.text-color-candy-apple {
+    color: #F4364C;
+}
+
+.text-color-cherry-red {
+    color: #BA0C2F;
+}
+
+.text-color-torino-red {
+    color: #EB3300;
+}
+
+/*Pinks*/
+.text-color-bright-pink {
+    color: #F65275;
+}
+
+.text-color-flamingo-pink {
+    color: #EF60A3;
+}
+
+/*Borders*/
+.thick-bottom-border {
+    border-bottom: 5px solid #ccc;
+}
+
+.medium-bottom-border{
+    border-bottom: 3px solid #ccc;
+}
+
+.double-bottom-border {
+    border-bottom: 3px solid #00B7BD;
+    /* Double shadow effect */
+    box-shadow: 0px 4px 0px 0px #B7DD79, 0px 8px 0px 0px #F68D2E;
+
+}
+.double-bottom-border-reverse {
+    border-bottom: 3px solid #F68D2E;
+    /* Double shadow effect */
+    box-shadow: 0px 4px 0px 0px #B7DD79, 0px 8px 0px 0px #00B7BD;
+}
+
+/*Border Colors*/
+.border-color-cyan-sky {
+    border-color: #00B7BD;
+}
+
+.border-color-wasabi {
+    border-color: #B7DD79;
+}
+.border-color-quince {
+    border-color: #F68D2E;
+}
+/*Background colors*/
+.button-color-salsa {
+    background-color: #DD4758;
+    border-color: #DD4758;
+    color: white;
+}
+
+.button-color-apple-blue {
+    background-color: #8FD6BD;
+    border-color: #8FD6BD;
+    color: white;
+}
+
+.button-color-seafoam {
+    background-color: #496C6C;
+    border-color: #496C6C;
+    color: white;
+}
+
+.background-color-body {
+    background-color: #edf8f8;
 }

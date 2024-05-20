@@ -7,35 +7,46 @@
     ViewData["Title"] = $"Meet Dr. {Model.Name}";
 }
 
-<div class="mt-5 d-flex justify-content-left">
-    <h2>Meet Dr. @Model.Name</h2>
+<div class=" justify-content-left ps-5 vet-details-header ">
+    <div class="row row-cols-3">
+        <div class="col text-color-blue"><h2>Meet Dr. @Model.Name</h2></div>
+        <div class="col"></div>
+@*         <div class="col list-unstyled"><a class="">@await Component.InvokeAsync("VeterinarianDropdownMenu")</a></div> *@
+    </div>
 </div>
-<div class="container mt-4 w-90 d-flex justify-content-center ">
-    <div class="card mb-3">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start square-image" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body mt-3 ms-2">
-                    <h5 class="card-title">Dr. @Model.Name</h5>
-                    <p class="card-text">@Model.Bio</p>
-                    <p class="card-text"><small class="text-body-secondary">Dr. @Model.Name has @Model.YearsExperience years of experience.</small></p>
+
+<div class="container mt-5  card-size">
+    <div class="card border-0 ">
+        <div class="row g-0 vet-details-card-body">
+
+            <div class="col align-content-center  m-2">
+                <div class="card-body ">
+                    <h4 class="card-title text-color-quince-jelly">Dr. @Model.Name</h4>
+                    <p class="card-text text-color-cyan-sky">@Model.Bio</p>
+                    <p class="card-text text-color-cyan-sky"><small class="text-body-secondary">Dr. @Model.Name has @Model.YearsExperience years of experience.</small></p>
                 </div>
             </div>
 
+            @*Image*@
+            <div class="col-md-4 mt-4">
+                <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start details-image" alt="...">
+            </div>
+
+
+            @*Edit and Delete buttons
+            Hide edit and delete buttons if the user isn't an admin*@
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="row mt-5 mb-5 ms-1">
+                    <div class="col align-content-center ms-1">
+                        <a class="btn button-color-seafoam col-1 " asp-controller="Veterinarian" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                        <a class="btn button-color-salsa col-1 ms-2" asp-controller="Veterinarian" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+                    </div>
+                </div>
+            }
         </div>
+        
     </div>
 
 </div>
-<div>
-    @*Hide edit and delete buttons if the user isn't an admin*@
-    @if (User.IsInRole("Admin"))
-    {
-        <div class="row mb-3">
-            <div class="col-7"></div>
-            <a class="btn btn-secondary col-2 ms-2" asp-controller="Veterinarian" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-            <a class="btn btn-danger col-2 ms-2" asp-controller="Veterinarian" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
-        </div>
-    }
-</div>
+

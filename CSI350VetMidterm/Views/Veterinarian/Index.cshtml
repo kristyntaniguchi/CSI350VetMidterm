@@ -8,22 +8,39 @@
 }
 
 @*Header*@
-<h2>Meet Our Team</h2>
+<div class="container">
+    <div class="row justify-content-between vet-details-header">
+        <div class="col">
+            <h1 class="text-color-blue mb-4 ">Meet Our Team</h1>
+
+        </div>
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="col-auto">
+                <div class="row align-items-center me-3">
+                    <a class="btn button-color-seafoam  " asp-controller="Veterinarian" asp-action="Create">Create New Vet</a>
+                </div>
+            </div>
+
+        }
+    </div>
+  
+</div>
 
 @*Cards for vet info.  Loop for each one*@
-<div class="container mt-5">
-    <div class="row row-cols-4 g-5 h-100 card-group ">
+<div class=" mt-5">
+    <div class="row  row-cols-4 g-5 h-100  ">
         @foreach (Veterinarian v in Model)
         {
             <div class="col ">
-                <div class="card flex-column h-100 border-0 h-100">
-                    <div class="d-flex h-100 justify-content-center align-content-center align-items-center product-display-image-container">
-                        <a class="text-decoration-none text-info  h-100 " asp-controller="Veterinarian" asp-action="Details" asp-route-id="@v.Id"><img src="@v.ImgURL" class="product-display-image" style="max-width: 100%; height: auto" /></a>
+                @*add card in the class below to make borders*@
+                <div class="flex-column  border-0 background-color-body">
+                    <div class="d-flex justify-content-center">
+                        <a class="text-decoration-none " asp-controller="Veterinarian" asp-action="Details" asp-route-id="@v.Id"><img src="@v.ImgURL" class="veterinarian-index-image" /></a>
                     </div>
 
-                    <div class="card-body ">
-                        <h6 class="card-title small text-trucate"><a class="text-decoration-none text-info overflow-hidden text-dark" asp-controller="Veterinarian" asp-action="Details" asp-route-id="@v.Id">Dr. @v.Name</a></h6>
-                        <div class="card-text small text-truncate block"></div>
+                    <div class="card-body d-flex align-items-center">
+                        <h5 class="card-text mx-auto"><a class="text-decoration-none overflow-hidden text-color-blue" asp-controller="Veterinarian" asp-action="Details" asp-route-id="@v.Id">Dr. @v.Name</a></h5>
                     </div>
 
                 </div>

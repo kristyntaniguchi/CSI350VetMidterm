@@ -3,31 +3,42 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CSI350VetMidterm</title>
+    <title>@ViewData["Title"] - Kauai Valley Veterinary Hospital</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CSI350VetMidterm.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CSI350VetMidterm</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-background-color border-bottom box-shadow">
+            <div class="container-fluid double-bottom-border ">
+
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Veterinarian" asp-action="Index">Our Veterinarians</a>
+                            <div class="nav-link "><i class="bi bi-envelope-fill  text-color-muted-green-greige"></i> info@vet.com  </div>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="Index">Patients</a>
+                            <div class="nav-link "> | </div>
                         </li>
+
+                        <li class="nav-item">
+                            <div class="nav-link"><i class="bi bi-telephone-fill text-color-muted-green-greige "></i> (808) 555 - 1234</div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="nav-link "> | </div>
+                        </li>
+
                         @*Add View Component and pass it the ViewComponent Name (the folder name, not default)*@
-                        <li class="nav-item">
-                            @await Component.InvokeAsync("VeterinarianDropdownMenu")
+                        <li class="nav-item ">
+                            <div class="nav-link "><i class="bi bi-geo-alt-fill text-color-muted-green-greige "></i> 62102 Alanui Dr, Hanapepe, HI 96766 </div>
                         </li>
 
                     </ul>
@@ -36,16 +47,65 @@
                 </div>
             </div>
         </nav>
+        @*text color: text-color-muted-green-greige*@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3 ">
+            <div class="container-fluid double-bottom-border">
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="https://www.kauainorthshoreanimalclinic.com/images/logo.svg" alt="logo" height="50vh" class="d-inline-block align-top me-2" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <div class="nav-link text-color-blue">About</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link text-color-blue">Services</div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link text-color-blue" asp-area="" asp-controller="Veterinarian" asp-action="Index">Our Veterinarians</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-blue" asp-area="" asp-controller="Patient" asp-action="Index">Patients</a>
+                        </li>
+
+                        @*Add View Component and pass it the ViewComponent Name (the folder name, not default)*@
+                        <li class="nav-item ">
+                            <a class=" text-decoration-none ">@await Component.InvokeAsync("VeterinarianDropdownMenu")</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link text-color-blue">Contact</div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 ">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - CSI350VetMidterm - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer text-muted double-bottom-border footer-border ">
+        <div class="container text-color-blue text-center bi-contact-info  contact-info">
+
+
+            <i class="bi bi-telephone-fill text-color-muted-green-greige "></i> (808) 555 - 1234
+
+
+            <i class="bi bi-geo-alt-fill text-color-muted-green-greige "></i> |  62102 Alanui Dr, Hanapepe, HI 96766
+
+
+
+            <i class="bi bi-envelope-fill  text-color-muted-green-greige"></i> | info@vet.com
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

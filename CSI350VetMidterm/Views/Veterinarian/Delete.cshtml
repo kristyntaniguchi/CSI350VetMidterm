@@ -8,46 +8,54 @@
     ViewData["Title"] = $"Delete {Model.Name}'s Profile";
 }
 
+<div class="container">
+    <div class="row justify-content-between vet-details-header">
+        <div class="col">
+            <h1 class="text-color-blue mb-4 ">Are you sure you want to delete Dr.@Model.Name's Profile?</h1>
 
-<h2>Are you sure you want to delete Dr.@Model.Name's Profile?</h2>
-<div>
-    <h4>Movie</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Bio)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Bio)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.YearsExperience)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.YearsExperience)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ImgURL)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ImgURL)
-        </dd>
-    </dl>
+        </div>
 
-    <div class="row mt-4">
-
-        <form asp-action="Delete"> 
-            <input type="hidden" asp-for="Id" />
-            <input type="submit" value="Delete" class="btn btn-danger col-1" /> 
-            <a class="btn btn-secondary col-1 ms-2" asp-controller="Veterinarian" asp-action="Details" asp-route-id="@Model.Id">Cancel</a>
-        </form>
     </div>
 
+    <div>
+        <h4>Movie</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Bio)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bio)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.YearsExperience)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.YearsExperience)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ImgURL)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ImgURL)
+            </dd>
+        </dl>
 
+        <div class="row mt-4">
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn button-color-salsa col-1" />
+                <a class="btn btn-secondary col-1 ms-2" asp-controller="Veterinarian" asp-action="Details" asp-route-id="@Model.Id">Cancel</a>
+            </form>
+        </div>
+
+
+    </div>
 </div>

@@ -9,18 +9,18 @@
 }
 
 <div class="mt-5 d-flex justify-content-left">
-    <h2>@Model.Name's Patient Profile</h2>
+    <h2 class="text-color-blue">@Model.Name's Patient Profile</h2>
 </div>
 
-<div class="container mt-4 w-90 d-flex justify-content-center ">
-    <div class="card mb-3" >
+<div class="container mt-4 justify-content-center  card-size">
+    <div class="card mb-3 background-color-body border-0" >
         <div class="row g-0">
-            <div class="col-md-4">
-                <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start square-image" alt="...">
+            <div class="col-md-4 container">
+                <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start details-image" alt="...">
             </div>
-            <div class="col-md-8">
-                <div class="card-body mt-3 ms-2">
-                    <h4 class="card-text">@Model.Name</h4>
+            <div class="col align-content-center">
+                <div class="card-body text-color-blue">
+                    <h4 class="card-text text-color-orange-bronze">@Model.Name</h4>
                     <p class="card-text">@Html.DisplayNameFor(model => model.Species): @Model.Species</p>
                     <p class="card-text">@Html.DisplayNameFor(model => model.Breed): @Model.Breed</p>
                     <p class="card-text">@Html.DisplayNameFor(model => model.Age): @Model.Age</p>

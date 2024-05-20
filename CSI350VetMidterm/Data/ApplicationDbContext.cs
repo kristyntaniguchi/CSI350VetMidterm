@@ -71,7 +71,7 @@ namespace CSI350VetMidterm.Data
                     Age = 9,
                     Medications = "NexGuard, HeartGuard, Cosequin",
                     MedicalHistory = "Up to date on vaccinations. Seperation anxiety. Whines after meal times because he is so sad that his food is all gone",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAF_fSa8AAF6yl?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -82,7 +82,7 @@ namespace CSI350VetMidterm.Data
                     Age = 8,
                     Medications = "NexGuard, HeartGuard, Cosequin",
                     MedicalHistory = "Up to date on vaccinations. Prefers to be an only child",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAF_fObQAE7eTW?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -93,7 +93,7 @@ namespace CSI350VetMidterm.Data
                     Age = 7,
                     Medications = "Pentoxifylline, NexGuard, HeartGuard, Prednisone, Cosequin, Immunotherapy injections ",
                     MedicalHistory = "Up to date on vaccinations. Autoimmune disorder. Extensive allergies",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAGL3DaQAAfWPz?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -104,7 +104,7 @@ namespace CSI350VetMidterm.Data
                     Age = 5,
                     Medications = "NexGuard, HeartGuard, Cosequin, Immunotherapy injections",
                     MedicalHistory = "Up to date on vaccinations. Autoimmune disorder. Extensive allergies",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAHgqwbMAA3ODl?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -115,7 +115,7 @@ namespace CSI350VetMidterm.Data
                     Age = 4,
                     Medications = "NexGuard, HeartGuard, Cosequin",
                     MedicalHistory = "Up to date on vaccinations. Attitude issues. Wishes he was an only child",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAGL3CasAAl78A?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -126,7 +126,7 @@ namespace CSI350VetMidterm.Data
                     Age = 3,
                     Medications = "NexGuard, HeartGuard, Cosequin",
                     MedicalHistory = "Up to date on vaccinations. Very wiggly, possibly made of Jell-O",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAGj4tagAEcvkL?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -137,7 +137,7 @@ namespace CSI350VetMidterm.Data
                     Age = 1,
                     Medications = "N/A",
                     MedicalHistory = "Healthy",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAF_fTaoAAsKtp?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -148,7 +148,7 @@ namespace CSI350VetMidterm.Data
                     Age = 6,
                     Medications = "Flea Preventative",
                     MedicalHistory = "Upper respiratory virus. Heart murmur",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAF_fTbcAANpk9?format=jpg&name=large"
                 },
                 new Patient
                 {
@@ -159,7 +159,7 @@ namespace CSI350VetMidterm.Data
                     Age = 5,
                     Medications = "Flea Preventative",
                     MedicalHistory = "Chews cardboard. Not fond of other cats. Cattitude",
-                    ImgURL = ""
+                    ImgURL = "https://pbs.twimg.com/media/GOAGL3CbUAAhgRf?format=jpg&name=large"
                 }, 
                 new Patient
                 {
@@ -170,7 +170,7 @@ namespace CSI350VetMidterm.Data
                     Age = 4,
                     Medications = "Coffee",
                     MedicalHistory = "Genetically engineered, extraterrestrial life-form.",
-                    ImgURL = "https://insidethemagic.net/wp-content/uploads/2020/03/Screen-Shot-2020-03-26-at-9.21.17-AM-550x324.png"
+                    ImgURL = "stitch"
                 }
                 );
 
