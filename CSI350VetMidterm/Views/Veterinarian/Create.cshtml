@@ -1,0 +1,49 @@
+﻿@*
+    Vet Create View
+*@
+@model Veterinarian
+
+@{
+    ViewData["Title"] = "Add a New Vet";
+}
+
+<h2>Add a New Veterinarian</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mt-1 mb-1">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-1 mb-1">
+                <label asp-for="Bio" class="control-label"></label>
+                <textarea asp-for="Bio" class="form-control" rows="7"></textarea>
+                <span asp-validation-for="Bio" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-1 mb-1">
+                <label asp-for="YearsExperience" class="control-label"></label>
+                <input asp-for="YearsExperience" class="form-control" />
+                <span asp-validation-for="YearsExperience" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-1 mb-1">
+                <label asp-for="ImgURL" class="control-label"></label>
+                <input asp-for="ImgURL" class="form-control" />
+                <span asp-validation-for="ImgURL" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3 mb-1">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,28 @@
+﻿@*
+    Patient Details
+*@
+
+@model Patient
+
+@{
+    ViewData["Title"] = $"Patient Profile";
+}
+
+<h2>@Model.Name's Patient Profile</h2>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">Age: @Model.Age</p>
+                <p class="card-text">Species: @Model.Species</p>
+                <p class="card-text">Breed: @Model.Breed</p>
+                <p class="card-text">Medications: @Model.Medications</p>
+                <p class="card-text"><small class="text-body-secondary">Medical History: @Model.MedicalHistory</small></p>
+            </div>
+        </div>
+    </div>
+</div
