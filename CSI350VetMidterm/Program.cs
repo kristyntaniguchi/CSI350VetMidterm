@@ -18,10 +18,12 @@ namespace CSI350VetMidterm
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("LocalConnection")));
 
             //*****Add Roles to the Identity service.  AddRoles<IdentityRole>()  goes before AddEntityFrameworkStores<ApplicationDbContext>();
-            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
 
             //*****Add builder.Services.AddRazorPages();  let's us use Razor Pages.
             builder.Services.AddRazorPages();
+
 
             var app = builder.Build();
 
@@ -39,6 +41,8 @@ namespace CSI350VetMidterm
             app.UseRouting();
 
             app.UseAuthorization();
+            //*****Add app.MapRazorPages();  It configures routing for identity.
+            app.MapRazorPages();
 
             app.MapControllerRoute(
                 name: "default",
