@@ -8,21 +8,27 @@
     ViewData["Title"] = $"Patient Profile";
 }
 
-<h2>@Model.Name's Patient Profile</h2>
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Name</h5>
-                <p class="card-text">Age: @Model.Age</p>
-                <p class="card-text">Species: @Model.Species</p>
-                <p class="card-text">Breed: @Model.Breed</p>
-                <p class="card-text">Medications: @Model.Medications</p>
-                <p class="card-text"><small class="text-body-secondary">Medical History: @Model.MedicalHistory</small></p>
+<div class="mt-5 d-flex justify-content-left">
+    <h2>@Model.Name's Patient Profile</h2>
+</div>
+
+<div class="container mt-4 w-90 d-flex justify-content-center ">
+    <div class="card mb-3" >
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src=@Html.DisplayFor(Model => Model.ImgURL) class="img-fluid rounded-start square-image" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body mt-3 ms-2">
+                    <h4 class="card-text">@Model.Name</h4>
+                    <p class="card-text">@Html.DisplayNameFor(model => model.Species): @Model.Species</p>
+                    <p class="card-text">@Html.DisplayNameFor(model => model.Breed): @Model.Breed</p>
+                    <p class="card-text">@Html.DisplayNameFor(model => model.Age): @Model.Age</p>
+                    <p class="card-text">@Html.DisplayNameFor(model => model.Medications): @Model.Medications</p>
+                    <p class="card-text"><small class="text-body-secondary">@Html.DisplayNameFor(model => model.MedicalHistory): @Model.MedicalHistory</small></p>
+                </div>
             </div>
         </div>
-    </div>
-</div
+    </div
+
+</div>

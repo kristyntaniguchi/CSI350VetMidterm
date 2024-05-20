@@ -1,0 +1,16 @@
+﻿@*
+    Dynamic Dropdown Menu View Component
+*@
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Veterinarians</a>
+    <ul class="dropdown-menu">
+        @foreach (Veterinarian v in Model)
+        {
+            <li>
+                @*text-decoration-none takes out the underline.  text-reset takes out the color*@
+                <a class="dropdown-item text-decoration-none text-reset" asp-controller="Veterinarian" asp-action="Details" asp-route-id="@v.Id">Dr. @v.Name</a>
+            </li>
+        }
+    </ul>
+</li>

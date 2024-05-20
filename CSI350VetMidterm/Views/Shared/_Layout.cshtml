@@ -25,6 +25,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="Index">Patients</a>
                         </li>
+                        @*Add View Component and pass it the ViewComponent Name (the folder name, not default)*@
+                        <li class="nav-item">
+                            @await Component.InvokeAsync("VeterinarianDropdownMenu")
+                        </li>
+
                     </ul>
                     @*Adds the login/register buttons*@
                     <partial name="_LoginPartial" />
